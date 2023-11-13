@@ -1,0 +1,61 @@
+body {
+  padding: 40px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(202, 202, 202);
+}
+
+.open-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: blueviolet;
+  border-radius: 10px;
+  padding: 14px 24px;
+  transition: backgroud-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.open-btn:hover {
+  background-color: rgb(152, 56, 241);
+}
+
+.open-btn:active {
+  background-color: rgb(180, 100, 255);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: rgb(0, 40, 75);
+  max-width: 280px;
+  display: none;
+}
+
+.menu.open {
+    display: block;
+}
+
+.menu__link {
+    display: block;
+    text-decoration: none;
+    padding: 14px 20px;
+    background-color: rgb(0, 201, 208);
+    color: rgb(0, 72, 74);
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+
+
+.menu__link:hover {
+    background-color: rgb(0, 130, 135);
+    color: aliceblue;
+}
+
+.menu__link:active {
+    background-color: rgb(0, 169, 175);
+    color: aliceblue;
+}
+
