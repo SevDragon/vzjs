@@ -20,52 +20,48 @@ function addTwoNumbers(x, y) {
   return x + y;
 }
 
-let resulttArr = []
+let resulttArr = [];
 
-for(let i = 0; i < 10; i++) {
-    let result = addTwoNumbers(i, i*2)
-    resulttArr.push(result)
-    
+for (let i = 0; i < 10; i++) {
+  let result = addTwoNumbers(i, i * 2);
+  resulttArr.push(result);
 }
 
 console.log(resulttArr);
-
 
 //IIFE func
 
 (function () {
   console.log("IIFE!");
-})()
-
+})();
 
 //Recursive functions
 
 function getRecursive(nr) {
   console.log(nr);
   if (nr > 0) {
-    getRecursive(--nr)
+    getRecursive(--nr);
   }
 }
 
-getRecursive(3)
+getRecursive(3);
 
 function logRecursive(nr) {
   console.log("Started function:", nr);
   if (nr > 0) {
-    logRecursive(nr -1)
+    logRecursive(nr - 1);
   } else {
     console.log("done with recursion");
   }
   console.log("Ended function:", nr);
 }
 
-logRecursive(3)
+logRecursive(3);
 
-
-//callback funcS
+//callback func
 
 function funcForCall(calback) {
-  calback()
+  calback();
   console.log("function");
 }
 
@@ -73,13 +69,10 @@ function callBackForFunc() {
   console.log("callback");
 }
 
+funcForCall(callBackForFunc);
 
-funcForCall(callBackForFunc)
-
-
-let youGotThis = function() {
+let youGotThis = function () {
   console.log("You're doing really well, keep coding!");
-}
+};
 
-setTimeout(youGotThis, 1000)
-
+setTimeout(youGotThis, 1000);
