@@ -33,7 +33,11 @@ let noDupArr = dupArr.filter((element, index, array) => {
 
 console.log(noDupArr);
 
+
+
 let newForArr = [];
+
+console.log();
 
 for (let i = 0; i < dupArr.length; i++) {
   if (dupArr.indexOf(dupArr[i]) == i) {
@@ -42,6 +46,8 @@ for (let i = 0; i < dupArr.length; i++) {
     console.log(dupArr[i]);
   }
 }
+
+console.log();
 
 console.log(newForArr);
 
@@ -55,4 +61,30 @@ console.log(mapArr);
 
 console.log();
 
+let stringForCap = "thIs will be capiTalized for each word";
 
+function strForCap(str) {
+  str = str.toLowerCase()
+  let emptyArr= []
+  let stArr = str.split(" ")
+  stArr.forEach(words => {
+    /* let UpperStr = words[0].toUpperCase() + words.slice(1) */
+    let UpperStr = words.slice(0, 1).toUpperCase() + words.slice(1)
+    emptyArr.push(UpperStr)
+  })
+  return emptyArr.join(" ")
+}
+
+
+
+console.log(strForCap(stringForCap));
+
+console.log();
+
+let strSl = "Create a substring"
+let subString = strSl.slice(5)
+let subString2 = strSl.slice(0, 3)
+
+console.log(strSl, subString, subString2);
+
+console.log(`${strSl}, slice(5) ${subString}, slice(0, 3) ${subString2}`);
