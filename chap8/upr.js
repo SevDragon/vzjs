@@ -33,8 +33,6 @@ let noDupArr = dupArr.filter((element, index, array) => {
 
 console.log(noDupArr);
 
-
-
 let newForArr = [];
 
 console.log();
@@ -64,27 +62,71 @@ console.log();
 let stringForCap = "thIs will be capiTalized for each word";
 
 function strForCap(str) {
-  str = str.toLowerCase()
-  let emptyArr= []
-  let stArr = str.split(" ")
-  stArr.forEach(words => {
+  str = str.toLowerCase();
+  let emptyArr = [];
+  let stArr = str.split(" ");
+  stArr.forEach((words) => {
     /* let UpperStr = words[0].toUpperCase() + words.slice(1) */
-    let UpperStr = words.slice(0, 1).toUpperCase() + words.slice(1)
-    emptyArr.push(UpperStr)
-  })
-  return emptyArr.join(" ")
+    let UpperStr = words.slice(0, 1).toUpperCase() + words.slice(1);
+    emptyArr.push(UpperStr);
+  });
+  return emptyArr.join(" ");
 }
-
-
 
 console.log(strForCap(stringForCap));
 
 console.log();
 
-let strSl = "Create a substring"
-let subString = strSl.slice(5)
-let subString2 = strSl.slice(0, 3)
+let stroke = "I love JavaScript";
 
-console.log(strSl, subString, subString2);
+stroke = stroke.toLowerCase();
 
-console.log(`${strSl}, slice(5) ${subString}, slice(0, 3) ${subString2}`);
+console.log(stroke);
+
+let strokeArr = ["a", "e", "i", "o", "u"];
+
+for (let i = 0; i < strokeArr.length; i++) {
+  console.log(strokeArr[i]);
+
+  stroke = stroke.replaceAll(strokeArr[i], i);
+}
+
+console.log(stroke);
+
+let xNUm = "43";
+
+console.log(isNaN(xNUm));
+
+console.log();
+
+let PI = Math.PI;
+
+console.log(PI);
+
+let numberCF = 5.7;
+
+let ceilNum = Math.ceil(numberCF);
+let floorNum = Math.ceil(numberCF);
+
+console.log(ceilNum, floorNum);
+
+console.log();
+
+console.log(Math.floor(Math.random() * 10) + 1);
+
+function randomMinMax(min, max) {
+  for (let i = min; i < max; i++) {
+    console.log(Math.floor(Math.random() * max) + 1);
+  }
+}
+
+randomMinMax(1, 10);
+
+console.log();
+
+function ranNum(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+for (let x = 0; x < 10; x++) {
+  console.log(ranNum(1, 10));
+}
