@@ -130,3 +130,60 @@ function ranNum(min, max) {
 for (let x = 0; x < 10; x++) {
   console.log(ranNum(1, 10));
 }
+
+console.log("//project 8 one");
+console.log();
+
+//project 8 one
+
+let stringWord = "garik";
+console.log(stringWord.length);
+
+function randomWord(str) {
+  let strMax = str.length;
+  let temp = "";
+
+  for (let i = 0; i < strMax; i++) {
+    let index = Math.floor(Math.random() * str.length);
+    temp += str[index];
+    str = str.substring(0, index) + str.substring(index);
+  }
+  return temp;
+}
+
+console.log(randomWord(stringWord));
+
+let str = "garik";
+
+function scramble(val) {
+  let max = val.length;
+  let temp = "";
+  for (let i = 0; i < max; i++) {
+    let index = Math.floor(Math.random() * val.length);
+    temp += val[index];
+    val = val.substr(0, index) + val.substr(index + 1);
+  }
+  return temp;
+}
+console.log(scramble(str));
+
+console.log();
+
+const arr1 = ["hi","world","hello","hii","hi","hi World","Hi"]; 
+// 4
+console.log(arr1.lastIndexOf("hi"));
+
+const arr2 = ["a","b","s","f","e","t","u"]; 
+console.log(arr2);
+arr2.copyWithin(0, 3);
+console.log(arr2);
+
+console.log();
+
+const arr3 = ["Hi","world","hello","Hii","hi","hi World","Hi"];
+const arr4 = arr3.filter((element,index)=>{
+    const ele2 = element.substring(0, 2); 
+    return (ele2 == "hi")
+    
+});
+console.log(arr4);

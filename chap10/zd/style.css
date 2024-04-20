@@ -1,0 +1,30 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+h1 {
+    align-items: center;
+    text-align: center;
+}
+table, tr, td {
+    border: 1px solid;
+  }
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.table-name {
+ margin-right: 10px;
+}
+
+.this_friend {
+    margin-top: 10px;
+    font-size: 30px;
+}

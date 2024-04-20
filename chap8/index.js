@@ -48,9 +48,9 @@ console.log(isNaN(strX));
 
 console.log();
 
-let isIntX = 3
+let isIntX = 3;
 
-let isIntStr = "Int"
+let isIntStr = "Int";
 
 console.log(Number.isInteger(isIntX));
 console.log(Number.isInteger(isIntStr));
@@ -58,8 +58,50 @@ console.log(Number.isInteger(2.5));
 
 console.log();
 
-let xFix = 1.23456
+let xFix = 1.23456;
 
-let newXFix = xFix.toFixed(2)
+let newXFix = xFix.toFixed(2);
 
 console.log(newXFix);
+
+console.log();
+
+//date
+
+let currentDateTime = new Date();
+
+console.log(currentDateTime);
+
+let now2 = Date.now();
+console.log(now2);
+
+let milliesDate = new Date(1000);
+console.log(milliesDate);
+
+let stringDate = new Date("Sat Jun 05 2021 12:40:12 GMT+0200");
+console.log(stringDate);
+
+let d = new Date();
+console.log("Day of week:", d.getDay());
+console.log("Day of month:", d.getDate());
+console.log("Month:", d.getMonth() + 1);
+console.log("Year:", d.getFullYear());
+console.log(
+  "Hours:",
+  d.getHours(),
+  "Minutes:",
+  d.getMinutes(),
+  "Seconds:",
+  d.getSeconds()
+);
+
+
+
+let future = new Date(2025, 5, 15);
+console.log(future);
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let day = future.getDate();
+let month = future.getMonth();
+let year = future.getFullYear();
+let myDate = `${months[month-1]} ${day} ${year}`;
+console.log(myDate);

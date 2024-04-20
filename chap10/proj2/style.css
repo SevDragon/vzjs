@@ -1,0 +1,39 @@
+td {
+  padding: 10px;
+}
+
+.name {
+  border: 1px solid violet;
+  margin-right: 10px;
+}
+
+.index {
+  border: 1px solid rgb(48, 239, 235);
+}
+
+tr {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+#addFriend {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid rgb(198, 239, 48);
+}
+
+#addNew {
+  padding: 10px;
+  border: 1px solid rgb(198, 239, 48);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
