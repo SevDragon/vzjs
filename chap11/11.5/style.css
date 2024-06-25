@@ -1,0 +1,21 @@
+body {
+    margin: 0 auto ;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+button {
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    
+}
+
+.textP {
+    display: flex;
+}
