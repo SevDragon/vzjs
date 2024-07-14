@@ -1,0 +1,24 @@
+.stars ul {
+  list-style-type: none;
+  padding: 0;
+}
+.star {
+  font-size: 2em;
+  color: #ddd;
+  display: inline-block;
+  cursor: pointer;
+ 
+}
+
+ul {
+  list-style-type: none;
+}
+.yellow {
+  color: yellow;
+}
+.output {
+  background-color: #ddd;
+}
+body {
+    background-color: rgb(82, 82, 82);
+}

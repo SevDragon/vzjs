@@ -8,9 +8,11 @@
   </head>
   <body>
 
-    <div class="box" ondrop="dDrop()" ondragover="nDrop()">Box 1</div>
+    <div class="box" ondrop="dDrop()" ondragover="nDrop()">Box 1
+      <div id="dragme" ondragstart="dStart()" draggable="true">Drag Me Please!</div>
+    </div>
     <div class="box" ondrop="dDrop()" ondragover="nDrop()">Box 2</div>
-    <div id="dragme" ondragstart="dStart()">Drag Me Please!</div>
+   
    
     <script src="drag.js"></script>
   </body>

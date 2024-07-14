@@ -1,8 +1,8 @@
-let dragEle = document.getElementById("dragme");
+//let dragEle = document.getElementById("dragme");
 
-dragEle.draggable = true;
+//dragEle.draggable = true;
 
-let holderItem = null;
+let holderItem;
 
 function dStart() {
   holderItem = event.target;
