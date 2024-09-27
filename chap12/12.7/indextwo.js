@@ -2,11 +2,26 @@ const userTask = document.querySelector(".main input");
 const addBtn = document.querySelector(".main button");
 const output = document.querySelector(".output");
 const tasks = JSON.parse(localStorage.getItem("tasklist")) || [];
-addBtn.addEventListener("click", createListItem);
+
 if (tasks.length > 0) {
   tasks.forEach((task) => {
     genItem(task.val, task.checked);
   });
+}
+function genItem(val, complete) {
+  const li = document.createElement("li");
+  const temp = document.createTextNode(val);
+  li.appendChild(temp);
+  output.append(li);
+  userTask.value = "";
+  if (complete) {
+    li.classList.add("ready");
+  }
+  li.addEventListener("click", (e) => {
+    li.classList.toggle("ready");
+    buildTasks();
+  });
+  return val;
 }
 function saveTasks() {
   localStorage.setItem("tasklist", JSON.stringify(tasks));
@@ -26,21 +41,7 @@ function buildTasks() {
   });
   saveTasks();
 }
-function genItem(val, complete) {
-  const li = document.createElement("li");
-  const temp = document.createTextNode(val);
-  li.appendChild(temp);
-  output.append(li);
-  userTask.value = "";
-  if (complete) {
-    li.classList.add("ready");
-  }
-  li.addEventListener("click", (e) => {
-    li.classList.toggle("ready");
-    buildTasks();
-  });
-  return val;
-}
+
 function createListItem() {
   const val = userTask.value;
   if (val.length > 0) {
@@ -52,3 +53,5 @@ function createListItem() {
     saveTasks();
   }
 }
+
+addBtn.addEventListener("click", createListItem);

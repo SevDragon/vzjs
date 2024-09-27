@@ -14,7 +14,7 @@ let aZAzMatch = aZAz.match(/[a-zA-Z0-9]/g);
 
 console.log(aZAzMatch);
 
-console.log("-----------------");
+console.log("--------textDot---------");
 
 let textDot = "Just some text.";
 
@@ -54,18 +54,18 @@ console.log("-----------------");
 let needTextOrNot = "You are doing great!";
 console.log(needTextOrNot.match(/n?g/gi));
 
-let moreTextRepat = "465123456789123a";
+let moreTextRepeat = "465123456789123a";
 
-console.log(moreTextRepat.match(/(123)+/g));
+console.log(moreTextRepeat.match(/(123)+/g));
 
-console.log(moreTextRepat.match(/(123)*a/));
+console.log(moreTextRepeat.match(/(123)*a/));
 
 let textRepeatMinMax = "abcasdabcwrqerabc";
 console.log(textRepeatMinMax.match(/(?<MinMax>abc){1,2}/));
 
 console.log("-----------------");
 
-// pratcal use of regex
+// practical use of regex
 
 let searchText = "The quick brown fox jumps over the lazy dog case.";
 
@@ -73,3 +73,22 @@ console.log(searchText.search(/Case/i));
 
 let textReplaceMatch = "Coding is fun. Coding opens up a lot of opportunities.";
 console.log(textReplaceMatch.replace(/Coding/g, "JavaScript"));
+
+
+/* email validation 
+[name]@[domain].[extension]
+*/
+
+
+let emailExample = "h8HgK@example.com";
+let emailExampleRegEx = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,6})/
+// const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/g;
+
+
+let validEmailTest = "maaike_1234@gmail.com";
+
+let invalidEmailTest = "maoole@gmail.com"
+
+console.log(validEmailTest.match(emailExampleRegEx));
+console.log(invalidEmailTest.match(emailExampleRegEx));
+
